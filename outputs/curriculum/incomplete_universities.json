@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "summary": {
+    "count": 2,
+    "by_year": {
+      "r3": 0,
+      "r4": 1,
+      "r5": 1,
+      "r6": 0,
+      "r7": 0,
+      "r7_pre": 0
+    }
+  },
+  "universities": [
+    {
+      "year": "r4",
+      "university_name": "新潟リハビリテーション大学",
+      "source_file": "literacy_application/r4/新潟リハビリテーション大学.xlsx",
+      "status": "partial",
+      "warnings": [
+        "様式２　プログラムを構成する授業科目:completion_requirement_not_found"
+      ],
+      "incomplete_programs": [
+        {
+          "sheet_name": "様式２　プログラムを構成する授業科目",
+          "warnings": [
+            "completion_requirement_not_found"
+          ],
+          "course_count": 5,
+          "has_completion_requirement": false
+        }
+      ]
+    },
+    {
+      "year": "r5",
+      "university_name": "北陸大学",
+      "source_file": "literacy_application/r5/北陸大学.xlsx",
+      "status": "failed",
+      "warnings": [
+        "target_sheet_not_found"
+      ],
+      "incomplete_programs": []
+    }
+  ]
+}

@@ -1,0 +1,938 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>MDASH 修了要件・構成科目ブラウザ</title>
+  <style>
+    :root {
+      --ink: #17324d;
+      --ink-soft: #516579;
+      --paper: #f6f8f9;
+      --surface: #ffffff;
+      --line: #d9e2e8;
+      --line-strong: #b9c8d2;
+      --teal: #08766c;
+      --teal-dark: #075e57;
+      --teal-soft: #e3f3f0;
+      --blue-soft: #e9f1f8;
+      --amber: #9a5d00;
+      --amber-soft: #fff4d9;
+      --red: #a73535;
+      --red-soft: #fdeaea;
+      --shadow: 0 10px 26px rgba(23, 50, 77, .08);
+      --radius: 14px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 85% -10%, rgba(8, 118, 108, .11), transparent 28rem),
+        var(--paper);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans JP", "Yu Gothic UI", sans-serif;
+      line-height: 1.65;
+    }
+
+    button, input, select { font: inherit; }
+
+    button, summary { -webkit-tap-highlight-color: transparent; }
+
+    :focus-visible {
+      outline: 3px solid rgba(8, 118, 108, .35);
+      outline-offset: 2px;
+    }
+
+    .hero {
+      color: #fff;
+      background:
+        linear-gradient(125deg, rgba(7, 94, 87, .96), rgba(23, 50, 77, .96)),
+        var(--ink);
+      border-bottom: 4px solid #f0b44d;
+    }
+
+    .hero-inner, .main {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .hero-inner { padding: 42px 0 34px; }
+
+    .eyebrow {
+      margin: 0 0 4px;
+      color: #bde6df;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.7rem, 4vw, 2.7rem);
+      line-height: 1.25;
+      letter-spacing: .02em;
+    }
+
+    .hero-copy {
+      max-width: 58rem;
+      margin: 12px 0 0;
+      color: #dce9f0;
+      font-size: .98rem;
+    }
+
+    .main { padding: 24px 0 56px; }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin: -42px 0 18px;
+      position: relative;
+    }
+
+    .stat {
+      padding: 15px 17px;
+      background: rgba(255, 255, 255, .98);
+      border: 1px solid rgba(255, 255, 255, .9);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .stat-label {
+      color: var(--ink-soft);
+      font-size: .76rem;
+      font-weight: 700;
+    }
+
+    .stat-value {
+      display: block;
+      margin-top: 2px;
+      color: var(--ink);
+      font-size: 1.55rem;
+      font-weight: 800;
+      line-height: 1.2;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .controls {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      padding: 14px;
+      background: rgba(246, 248, 249, .93);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 8px 22px rgba(23, 50, 77, .07);
+      backdrop-filter: blur(10px);
+    }
+
+    .control-grid {
+      display: grid;
+      grid-template-columns: minmax(240px, 1fr) 170px 170px;
+      gap: 10px;
+    }
+
+    .field { display: grid; gap: 4px; }
+
+    .field label {
+      color: var(--ink-soft);
+      font-size: .72rem;
+      font-weight: 800;
+    }
+
+    .input, .select {
+      width: 100%;
+      height: 42px;
+      padding: 0 12px;
+      color: var(--ink);
+      background: var(--surface);
+      border: 1px solid var(--line-strong);
+      border-radius: 9px;
+    }
+
+    .input:focus, .select:focus { border-color: var(--teal); }
+
+    .year-row, .action-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 12px;
+    }
+
+    .year-button, .soft-button {
+      min-height: 34px;
+      padding: 5px 11px;
+      color: var(--ink);
+      background: var(--surface);
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      cursor: pointer;
+    }
+
+    .year-button:hover, .soft-button:hover { border-color: var(--teal); }
+
+    .year-button.active {
+      color: #fff;
+      background: var(--teal);
+      border-color: var(--teal);
+    }
+
+    .action-row { justify-content: space-between; }
+
+    .button-group { display: flex; flex-wrap: wrap; gap: 7px; }
+
+    .result-meta {
+      color: var(--ink-soft);
+      font-size: .88rem;
+    }
+
+    .result-meta strong { color: var(--ink); }
+
+    .hint {
+      margin: 12px 2px 16px;
+      color: var(--ink-soft);
+      font-size: .82rem;
+    }
+
+    .university-list { display: grid; gap: 10px; }
+
+    .uni-card {
+      overflow: clip;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 3px 12px rgba(23, 50, 77, .045);
+    }
+
+    .uni-card[open] {
+      border-color: #a9c6c3;
+      box-shadow: var(--shadow);
+    }
+
+    .uni-summary {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      min-height: 70px;
+      padding: 13px 16px;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .uni-summary::-webkit-details-marker, .program-summary::-webkit-details-marker { display: none; }
+
+    .uni-summary::after {
+      content: "+";
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      color: var(--teal);
+      background: var(--teal-soft);
+      border-radius: 50%;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .uni-card[open] > .uni-summary::after { content: "−"; }
+
+    .year-pill, .status-pill, .mini-pill, .code-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .year-pill {
+      min-width: 54px;
+      padding: 4px 9px;
+      color: #28506e;
+      background: var(--blue-soft);
+      font-size: .75rem;
+    }
+
+    .uni-name {
+      display: block;
+      overflow: hidden;
+      margin-bottom: 2px;
+      font-size: 1.02rem;
+      font-weight: 800;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .uni-subline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px 12px;
+      color: var(--ink-soft);
+      font-size: .78rem;
+    }
+
+    .status-pill {
+      padding: 3px 8px;
+      font-size: .7rem;
+    }
+
+    .status-success { color: var(--teal-dark); background: var(--teal-soft); }
+    .status-partial { color: var(--amber); background: var(--amber-soft); }
+    .status-failed { color: var(--red); background: var(--red-soft); }
+
+    .uni-body {
+      padding: 0 16px 18px;
+      border-top: 1px solid var(--line);
+    }
+
+    .source-line {
+      margin: 12px 0;
+      color: var(--ink-soft);
+      font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+      font-size: .74rem;
+      overflow-wrap: anywhere;
+    }
+
+    .notice {
+      margin: 12px 0;
+      padding: 10px 12px;
+      color: var(--amber);
+      background: var(--amber-soft);
+      border-left: 4px solid #e5a429;
+      border-radius: 8px;
+      font-size: .83rem;
+    }
+
+    .notice.error {
+      color: var(--red);
+      background: var(--red-soft);
+      border-left-color: #d66363;
+    }
+
+    .program-stack { display: grid; gap: 10px; }
+
+    .program-card {
+      background: #fbfcfd;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+    }
+
+    .program-summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 12px 14px;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .program-title {
+      display: block;
+      font-size: .92rem;
+      font-weight: 800;
+    }
+
+    .program-sheet {
+      display: block;
+      margin-top: 2px;
+      color: var(--ink-soft);
+      font-size: .7rem;
+    }
+
+    .mini-pill {
+      padding: 3px 8px;
+      color: var(--ink-soft);
+      background: #edf1f4;
+      font-size: .7rem;
+    }
+
+    .program-content {
+      padding: 0 14px 15px;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-title {
+      margin: 16px 0 8px;
+      font-size: .9rem;
+    }
+
+    .requirement-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 230px;
+      gap: 12px;
+    }
+
+    .requirement-text {
+      margin: 0;
+      padding: 13px 14px;
+      white-space: pre-wrap;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      font-size: .86rem;
+    }
+
+    .requirement-facts {
+      display: grid;
+      align-content: start;
+      gap: 6px;
+      margin: 0;
+    }
+
+    .fact {
+      display: grid;
+      grid-template-columns: 7.4rem 1fr;
+      gap: 6px;
+      padding: 8px 10px;
+      background: #edf4f6;
+      border-radius: 8px;
+      font-size: .76rem;
+    }
+
+    .fact dt { color: var(--ink-soft); font-weight: 700; }
+    .fact dd { margin: 0; font-weight: 700; overflow-wrap: anywhere; }
+
+    .departments {
+      margin: 8px 0 0;
+      padding: 9px 11px;
+      color: var(--ink-soft);
+      background: var(--blue-soft);
+      border-radius: 8px;
+      font-size: .78rem;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 9px;
+    }
+
+    table {
+      width: 100%;
+      min-width: 790px;
+      border-collapse: collapse;
+      font-size: .78rem;
+    }
+
+    th, td {
+      padding: 9px 10px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid #e7edf1;
+    }
+
+    th {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      color: #314d63;
+      background: #edf3f6;
+      font-size: .72rem;
+      white-space: nowrap;
+    }
+
+    tbody tr:last-child td { border-bottom: 0; }
+    tbody tr:hover { background: #f5faf9; }
+
+    .number-cell {
+      width: 3.2rem;
+      color: var(--ink-soft);
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .credits-cell { width: 4.6rem; text-align: right; font-variant-numeric: tabular-nums; }
+    .type-cell { width: 6rem; }
+
+    .codes { display: flex; flex-wrap: wrap; gap: 3px; }
+
+    .code-pill {
+      padding: 1px 6px;
+      color: #31536c;
+      background: var(--blue-soft);
+      font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+      font-size: .66rem;
+    }
+
+    .course-name { font-weight: 700; }
+
+    .course-variant {
+      display: block;
+      margin-top: 2px;
+      color: var(--ink-soft);
+      font-size: .68rem;
+    }
+
+    .source-details summary {
+      color: var(--teal-dark);
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .source-details ul {
+      margin: 5px 0 0;
+      padding-left: 1.2rem;
+      color: var(--ink-soft);
+      font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+      font-size: .66rem;
+      overflow-wrap: anywhere;
+    }
+
+    .empty {
+      padding: 30px 20px;
+      color: var(--ink-soft);
+      text-align: center;
+      background: var(--surface);
+      border: 1px dashed var(--line-strong);
+      border-radius: var(--radius);
+    }
+
+    .footer {
+      margin-top: 32px;
+      padding-top: 18px;
+      color: var(--ink-soft);
+      border-top: 1px solid var(--line);
+      font-size: .78rem;
+      text-align: center;
+    }
+
+    .footer a { color: var(--teal-dark); }
+
+    @media (max-width: 820px) {
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .control-grid { grid-template-columns: 1fr 1fr; }
+      .field-search { grid-column: 1 / -1; }
+      .requirement-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .hero-inner, .main { width: min(100% - 20px, 1180px); }
+      .hero-inner { padding-top: 30px; }
+      .stats { gap: 8px; margin-top: -28px; }
+      .stat { padding: 12px; }
+      .stat-value { font-size: 1.25rem; }
+      .controls { padding: 10px; }
+      .control-grid { grid-template-columns: 1fr; }
+      .field-search { grid-column: auto; }
+      .action-row { align-items: flex-start; }
+      .uni-summary { grid-template-columns: auto minmax(0, 1fr) auto; padding: 11px; }
+      .uni-name { white-space: normal; }
+      .uni-body { padding: 0 10px 12px; }
+      .program-content { padding: 0 9px 10px; }
+    }
+
+    @media print {
+      .hero { color: var(--ink); background: #fff; border-bottom: 2px solid var(--ink); }
+      .hero-copy, .eyebrow { color: var(--ink-soft); }
+      .stats { margin-top: 12px; }
+      .controls, .hint, .footer { display: none !important; }
+      .uni-card { break-inside: avoid; box-shadow: none; }
+      .uni-summary::after { display: none; }
+      .table-wrap { overflow: visible; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">MDASH Literacy Applications</p>
+      <h1>修了要件・構成科目ブラウザ</h1>
+      <p class="hero-copy">令和3年度から令和7年度先行認定までの申請書を、大学・プログラム単位で横断検索できます。全大学の修了要件と構成科目を最初から展開し、上から順に目視できます。</p>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="stats" aria-label="全体集計">
+      <div class="stat"><span class="stat-label">大学等</span><strong class="stat-value" id="stat-universities">—</strong></div>
+      <div class="stat"><span class="stat-label">プログラム</span><strong class="stat-value" id="stat-programs">—</strong></div>
+      <div class="stat"><span class="stat-label">構成科目</span><strong class="stat-value" id="stat-courses">—</strong></div>
+      <div class="stat"><span class="stat-label">要確認</span><strong class="stat-value" id="stat-incomplete">—</strong></div>
+    </section>
+
+    <section class="controls" aria-label="検索と絞り込み">
+      <div class="control-grid">
+        <div class="field field-search">
+          <label for="search">大学・プログラム・修了要件・科目を検索</label>
+          <input class="input" id="search" type="search" placeholder="例：北海道大学、統計学、6単位" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="status-filter">抽出状態</label>
+          <select class="select" id="status-filter">
+            <option value="all">すべて</option>
+            <option value="success">完了</option>
+            <option value="partial">一部抽出</option>
+            <option value="failed">未抽出</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="sort">並び順</label>
+          <select class="select" id="sort">
+            <option value="year-name">年度 → 大学名</option>
+            <option value="name">大学名</option>
+            <option value="courses-desc">科目数が多い順</option>
+          </select>
+        </div>
+      </div>
+      <div class="year-row" id="year-filters" aria-label="年度"></div>
+      <div class="action-row">
+        <div class="result-meta" id="result-meta" aria-live="polite"></div>
+        <div class="button-group">
+          <button class="soft-button" type="button" id="open-all">表示中を展開</button>
+          <button class="soft-button" type="button" id="close-all">すべて閉じる</button>
+          <button class="soft-button" type="button" id="print">印刷</button>
+        </div>
+      </div>
+    </section>
+
+    <p class="hint">全大学を展開済みです。検索ショートカット: <kbd>/</kbd> で検索欄へ移動、<kbd>Esc</kbd> で検索語をクリア。</p>
+    <section class="university-list" id="university-list" aria-label="大学一覧"></section>
+    <div class="empty" id="empty" hidden>条件に一致する大学がありません。</div>
+
+    <footer class="footer">
+      <a href="all_years.json">元の全年度 JSON を開く</a>
+      <span> · </span>
+      <span id="schema-version"></span>
+    </footer>
+  </main>
+
+  <script id="curriculum-data" type="application/json">{{DATA_JSON}}</script>
+  <script>
+    (() => {
+      "use strict";
+
+      const DATA = JSON.parse(document.getElementById("curriculum-data").textContent);
+      const YEAR_LABELS = { r3: "令和3年度", r4: "令和4年度", r5: "令和5年度", r6: "令和6年度", r7: "令和7年度", r7_pre: "R7先行" };
+      const STATUS_LABELS = { success: "完了", partial: "一部抽出", failed: "未抽出", unknown: "不明" };
+      const state = { year: "all", status: "all", query: "", sort: "year-name" };
+      const searchCache = new WeakMap();
+
+      const list = document.getElementById("university-list");
+      const empty = document.getElementById("empty");
+      const resultMeta = document.getElementById("result-meta");
+      const searchInput = document.getElementById("search");
+      const statusFilter = document.getElementById("status-filter");
+      const sortSelect = document.getElementById("sort");
+
+      function node(tag, options = {}, children = []) {
+        const element = document.createElement(tag);
+        if (options.className) element.className = options.className;
+        if (options.text !== undefined && options.text !== null) element.textContent = String(options.text);
+        if (options.attrs) {
+          for (const [key, value] of Object.entries(options.attrs)) {
+            if (value !== undefined && value !== null) element.setAttribute(key, String(value));
+          }
+        }
+        for (const child of Array.isArray(children) ? children : [children]) {
+          if (child) element.append(child);
+        }
+        return element;
+      }
+
+      function normalize(value) {
+        return String(value ?? "").normalize("NFKC").toLocaleLowerCase("ja").replace(/\s+/g, " ").trim();
+      }
+
+      function number(value) {
+        return new Intl.NumberFormat("ja-JP").format(value ?? 0);
+      }
+
+      function searchText(university) {
+        if (searchCache.has(university)) return searchCache.get(university);
+        const parts = [university.name, university.year, university.source_file];
+        for (const program of university.programs) {
+          parts.push(program.program_name, program.sheet_name, ...program.departments, program.requirement.text, program.requirement.required_status);
+          for (const course of program.courses) {
+            parts.push(course.name, ...course.name_variants, ...course.categories, ...course.codes);
+          }
+        }
+        const value = normalize(parts.filter(Boolean).join(" "));
+        searchCache.set(university, value);
+        return value;
+      }
+
+      function statusPill(status) {
+        return node("span", { className: `status-pill status-${status}`, text: STATUS_LABELS[status] ?? status });
+      }
+
+      function universityMatches(university) {
+        if (state.year !== "all" && university.year !== state.year) return false;
+        if (state.status !== "all" && university.status !== state.status) return false;
+        if (state.query && !searchText(university).includes(state.query)) return false;
+        return true;
+      }
+
+      function sortedUniversities(items) {
+        const copy = [...items];
+        if (state.sort === "name") {
+          copy.sort((a, b) => a.name.localeCompare(b.name, "ja") || a.year.localeCompare(b.year));
+        } else if (state.sort === "courses-desc") {
+          copy.sort((a, b) => b.course_count - a.course_count || a.name.localeCompare(b.name, "ja"));
+        } else {
+          copy.sort((a, b) => a.year.localeCompare(b.year) || a.name.localeCompare(b.name, "ja"));
+        }
+        return copy;
+      }
+
+      function warningBlock(messages, isError = false) {
+        if (!messages?.length) return null;
+        return node("div", { className: `notice${isError ? " error" : ""}`, text: messages.join(" / ") });
+      }
+
+      function fact(label, value) {
+        return node("div", { className: "fact" }, [
+          node("dt", { text: label }),
+          node("dd", { text: value ?? "—" }),
+        ]);
+      }
+
+      function requirementType(course) {
+        if (course.is_required === true || course.requirement_types.includes("required")) return "必須";
+        if (course.requirement_types.includes("required_elective")) return "選択必須";
+        if (course.is_required === false || course.requirement_types.some(value => ["optional", "elective"].includes(value))) return "選択";
+        return "—";
+      }
+
+      function sourceCell(course) {
+        const details = node("details", { className: "source-details" });
+        details.append(node("summary", { text: course.sources.length ? `${course.sources.length}件` : "—" }));
+        if (course.sources.length) {
+          const ul = node("ul");
+          for (const source of course.sources) ul.append(node("li", { text: source }));
+          details.append(ul);
+        }
+        return details;
+      }
+
+      function courseTable(program) {
+        if (!program.courses.length) return node("div", { className: "empty", text: "構成科目を抽出できませんでした。" });
+        const table = node("table");
+        const thead = node("thead");
+        const header = node("tr");
+        for (const title of ["#", "授業科目", "単位", "区分", "モデルカリキュラム", "出典セル"]) {
+          header.append(node("th", { text: title }));
+        }
+        thead.append(header);
+        table.append(thead);
+
+        const tbody = node("tbody");
+        program.courses.forEach((course, index) => {
+          const nameCell = node("td");
+          nameCell.append(node("span", { className: "course-name", text: course.name }));
+          if (course.name_variants.length) nameCell.append(node("span", { className: "course-variant", text: `表記違い: ${course.name_variants.join(" / ")}` }));
+
+          const codes = node("div", { className: "codes" });
+          if (course.codes.length) {
+            for (const code of course.codes) codes.append(node("span", { className: "code-pill", text: code }));
+          } else {
+            codes.textContent = "—";
+          }
+
+          const row = node("tr", {}, [
+            node("td", { className: "number-cell", text: index + 1 }),
+            nameCell,
+            node("td", { className: "credits-cell", text: course.credits ?? "—" }),
+            node("td", { className: "type-cell", text: requirementType(course) }),
+            node("td", {}, codes),
+            node("td", {}, sourceCell(course)),
+          ]);
+          tbody.append(row);
+        });
+        table.append(tbody);
+        return node("div", { className: "table-wrap" }, table);
+      }
+
+      function programContent(program) {
+        const content = node("div", { className: "program-content" });
+        const warnings = warningBlock(program.warnings, program.status !== "success");
+        if (warnings) content.append(warnings);
+
+        content.append(node("h3", { className: "section-title", text: "修了要件" }));
+        const scope = program.requirement.scope ?? {};
+        const sameAcross = scope.same_across_departments === true ? "学部・学科で共通" : scope.same_across_departments === false ? "学部・学科で相違" : "—";
+        const facts = node("dl", { className: "requirement-facts" }, [
+          fact("最低科目数", program.requirement.minimum_courses != null ? `${program.requirement.minimum_courses}科目` : "—"),
+          fact("最低単位数", program.requirement.minimum_credits != null ? `${program.requirement.minimum_credits}単位` : "—"),
+          fact("適用範囲", sameAcross),
+          fact("履修必須", program.requirement.required_status || "—"),
+        ]);
+        const requirementText = node("p", {
+          className: "requirement-text",
+          text: program.requirement.text || "修了要件を抽出できませんでした。",
+        });
+        content.append(node("div", { className: "requirement-grid" }, [requirementText, facts]));
+
+        if (program.departments.length) {
+          content.append(node("p", { className: "departments", text: `対象学部・学科: ${program.departments.join(" / ")}` }));
+        }
+
+        content.append(node("h3", { className: "section-title", text: `構成科目（${number(program.course_count)}件）` }));
+        content.append(courseTable(program));
+        return content;
+      }
+
+      function programCard(program, openByDefault) {
+        const details = node("details", { className: "program-card" });
+        if (openByDefault) details.open = true;
+        const title = program.program_name || "プログラム名未記載";
+        details.append(node("summary", { className: "program-summary" }, [
+          node("span", {}, [
+            node("span", { className: "program-title", text: title }),
+            node("span", { className: "program-sheet", text: program.sheet_name }),
+          ]),
+          node("span", { className: "mini-pill", text: `${number(program.course_count)}科目` }),
+        ]));
+        details.addEventListener("toggle", () => {
+          if (details.open && !details.dataset.rendered) {
+            details.append(programContent(program));
+            details.dataset.rendered = "true";
+          }
+        });
+        if (openByDefault) {
+          details.append(programContent(program));
+          details.dataset.rendered = "true";
+        }
+        return details;
+      }
+
+      function renderUniversityBody(details, university) {
+        if (details.dataset.rendered) return;
+        const body = node("div", { className: "uni-body" });
+        body.append(node("p", { className: "source-line", text: `元ファイル: ${university.source_file}` }));
+        const warnings = warningBlock(university.warnings, university.status !== "success");
+        if (warnings) body.append(warnings);
+
+        if (!university.programs.length) {
+          body.append(node("div", { className: "empty", text: "修了要件・構成科目の対象シートがありません。" }));
+        } else {
+          const stack = node("div", { className: "program-stack" });
+          university.programs.forEach(program => stack.append(programCard(program, true)));
+          body.append(stack);
+        }
+        details.append(body);
+        details.dataset.rendered = "true";
+      }
+
+      function universityCard(university) {
+        const details = node("details", {
+          className: "uni-card",
+          attrs: { id: university.id, "data-status": university.status },
+        });
+        const title = node("span", {}, [
+          node("span", { className: "uni-name", text: university.name }),
+          node("span", { className: "uni-subline" }, [
+            statusPill(university.status),
+            node("span", { text: `${number(university.program_count)}プログラム` }),
+            node("span", { text: `${number(university.course_count)}科目` }),
+          ]),
+        ]);
+        details.append(node("summary", { className: "uni-summary" }, [
+          node("span", { className: "year-pill", text: YEAR_LABELS[university.year] }),
+          title,
+        ]));
+        details.addEventListener("toggle", () => {
+          if (details.open) renderUniversityBody(details, university);
+        });
+        details.open = true;
+        renderUniversityBody(details, university);
+        return details;
+      }
+
+      function render() {
+        const visible = sortedUniversities(DATA.universities.filter(universityMatches));
+        const fragment = document.createDocumentFragment();
+        for (const university of visible) fragment.append(universityCard(university));
+        list.replaceChildren(fragment);
+        empty.hidden = visible.length !== 0;
+        const programCount = visible.reduce((sum, item) => sum + item.program_count, 0);
+        const courseCount = visible.reduce((sum, item) => sum + item.course_count, 0);
+        resultMeta.replaceChildren(
+          node("strong", { text: `${number(visible.length)}校` }),
+          document.createTextNode(` / ${number(programCount)}プログラム / ${number(courseCount)}科目`),
+        );
+        if (location.hash) {
+          const target = document.getElementById(location.hash.slice(1));
+          if (target) {
+            target.open = true;
+            renderUniversityBody(target, visible.find(item => item.id === target.id));
+            setTimeout(() => target.scrollIntoView({ block: "start" }), 0);
+          }
+        }
+      }
+
+      function makeYearFilters() {
+        const container = document.getElementById("year-filters");
+        const options = [["all", "全年度"], ...Object.entries(YEAR_LABELS)];
+        for (const [value, label] of options) {
+          const button = node("button", {
+            className: `year-button${value === "all" ? " active" : ""}`,
+            text: label,
+            attrs: { type: "button", "data-year": value },
+          });
+          button.addEventListener("click", () => {
+            state.year = value;
+            container.querySelectorAll("button").forEach(item => item.classList.toggle("active", item === button));
+            render();
+          });
+          container.append(button);
+        }
+      }
+
+      function debounce(callback, delay) {
+        let timer;
+        return (...args) => {
+          clearTimeout(timer);
+          timer = setTimeout(() => callback(...args), delay);
+        };
+      }
+
+      searchInput.addEventListener("input", debounce(() => {
+        state.query = normalize(searchInput.value);
+        render();
+      }, 100));
+      statusFilter.addEventListener("change", () => { state.status = statusFilter.value; render(); });
+      sortSelect.addEventListener("change", () => { state.sort = sortSelect.value; render(); });
+      document.getElementById("open-all").addEventListener("click", () => {
+        list.querySelectorAll(".uni-card").forEach(details => {
+          details.open = true;
+          const university = DATA.universities.find(item => item.id === details.id);
+          if (university) renderUniversityBody(details, university);
+        });
+      });
+      document.getElementById("close-all").addEventListener("click", () => {
+        list.querySelectorAll("details[open]").forEach(details => { details.open = false; });
+      });
+      document.getElementById("print").addEventListener("click", () => window.print());
+      document.addEventListener("keydown", event => {
+        if (event.key === "/" && document.activeElement !== searchInput) {
+          event.preventDefault();
+          searchInput.focus();
+        } else if (event.key === "Escape" && document.activeElement === searchInput && searchInput.value) {
+          searchInput.value = "";
+          state.query = "";
+          render();
+        }
+      });
+
+      const summary = DATA.summary;
+      document.getElementById("stat-universities").textContent = number(summary.university_count);
+      document.getElementById("stat-programs").textContent = number(summary.program_count);
+      document.getElementById("stat-courses").textContent = number(summary.course_count);
+      document.getElementById("stat-incomplete").textContent = number((summary.status_counts.partial || 0) + (summary.status_counts.failed || 0));
+      document.getElementById("schema-version").textContent = `JSON schema ${DATA.schema_version ?? "—"}`;
+
+      makeYearFilters();
+      render();
+    })();
+  </script>
+</body>
+</html>

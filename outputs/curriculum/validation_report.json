@@ -1,0 +1,74 @@
+{
+  "valid": true,
+  "error_count": 0,
+  "errors": [],
+  "years": {
+    "r3": {
+      "university_count": 77,
+      "program_count": 144,
+      "course_count": 1462,
+      "status_counts": {
+        "success": 77,
+        "partial": 0,
+        "failed": 0
+      },
+      "error_count": 0
+    },
+    "r4": {
+      "university_count": 139,
+      "program_count": 267,
+      "course_count": 1443,
+      "status_counts": {
+        "success": 138,
+        "partial": 1,
+        "failed": 0
+      },
+      "error_count": 0
+    },
+    "r5": {
+      "university_count": 165,
+      "program_count": 272,
+      "course_count": 1216,
+      "status_counts": {
+        "success": 164,
+        "partial": 0,
+        "failed": 1
+      },
+      "error_count": 0
+    },
+    "r6": {
+      "university_count": 112,
+      "program_count": 166,
+      "course_count": 535,
+      "status_counts": {
+        "success": 112,
+        "partial": 0,
+        "failed": 0
+      },
+      "error_count": 0
+    },
+    "r7": {
+      "university_count": 98,
+      "program_count": 121,
+      "course_count": 349,
+      "status_counts": {
+        "success": 98,
+        "partial": 0,
+        "failed": 0
+      },
+      "error_count": 0
+    },
+    "r7_pre": {
+      "university_count": 20,
+      "program_count": 22,
+      "course_count": 45,
+      "status_counts": {
+        "success": 20,
+        "partial": 0,
+        "failed": 0
+      },
+      "error_count": 0
+    }
+  },
+  "incomplete_university_count": 2
+}

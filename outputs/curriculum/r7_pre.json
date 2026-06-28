@@ -1,0 +1,3170 @@
+{
+  "schema_version": "1.0.0",
+  "year": "r7_pre",
+  "input_directory": "literacy_application/r7_pre",
+  "summary": {
+    "university_count": 20,
+    "status_counts": {
+      "success": 20,
+      "partial": 0,
+      "failed": 0
+    },
+    "program_count": 22,
+    "course_count": 45
+  },
+  "universities": [
+    {
+      "university_name": "ZEN大学",
+      "source_file": "literacy_application/r7_pre/ZEN大学.xlsx",
+      "programs": [
+        {
+          "sheet_name": "様式１　構成する授業科目",
+          "source_sheets": [
+            "様式１　構成する授業科目"
+          ],
+          "program_name": "数理・データサイエンス・AI教育プログラム",
+          "target_departments": [],
+          "completion_requirement": {
+            "text": "現代社会と数学の2単位を修得すること ITリテラシーの2単位を修得すること 人工知能活用実践の2単位を修得すること",
+            "minimum_courses": 3,
+            "minimum_credits": 6,
+            "scope": {
+              "raw": "学部・学科によって、修了要件は相違しない",
+              "same_across_departments": true,
+              "source_cell": "D9"
+            },
+            "program_required_status": "令和6年度以前又は令和7年度より、履修することが必須のプログラムとして実施"
+          },
+          "courses": [
+            {
+              "name": "現代社会と数学",
+              "name_variants": [],
+              "credits": 2,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "1-4",
+                "1-6",
+                "2-1",
+                "2-2",
+                "2-3",
+                "3-2"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 2,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "1-4",
+                    "1-6",
+                    "2-1",
+                    "2-2",
+                    "2-3",
+                    "3-2"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D23",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            },
+            {
+              "name": "ITリテラシー",
+              "name_variants": [],
+              "credits": 2,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "1-2",
+                "1-3",
+                "1-4",
+                "1-6",
+                "2-1",
+                "2-2",
+                "2-3",
+                "3-1",
+                "3-2"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 2,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "1-2",
+                    "1-3",
+                    "1-4",
+                    "1-6",
+                    "2-1",
+                    "2-2",
+                    "2-3",
+                    "3-1",
+                    "3-2"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D24",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            },
+            {
+              "name": "人工知能活用実践",
+              "name_variants": [],
+              "credits": 2,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "1-2",
+                "1-3",
+                "1-4",
+                "1-5",
+                "1-6",
+                "2-2",
+                "2-3",
+                "3-1"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 2,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "1-2",
+                    "1-3",
+                    "1-4",
+                    "1-5",
+                    "1-6",
+                    "2-2",
+                    "2-3",
+                    "3-1"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D25",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            }
+          ],
+          "course_count": 3,
+          "extraction": {
+            "status": "success",
+            "strategy": "direct_categories",
+            "warnings": [],
+            "source": {
+              "requirement_cells": [
+                "D15"
+              ],
+              "minimums_cell": "B19",
+              "department_cells": [],
+              "program_name": {
+                "sheet": "様式１　構成する授業科目",
+                "cell": "D5"
+              },
+              "program_required_status_cell": "D13"
+            }
+          }
+        }
+      ],
+      "extraction": {
+        "status": "success",
+        "warnings": [],
+        "source": {
+          "university_name": {
+            "sheet": "様式１　構成する授業科目",
+            "cell": "D4"
+          }
+        }
+      }
+    },
+    {
+      "university_name": "修文大学",
+      "source_file": "literacy_application/r7_pre/修文大学.xlsx",
+      "programs": [
+        {
+          "sheet_name": "様式１　構成する授業科目（健康栄養学部・管理栄養学科）",
+          "source_sheets": [
+            "様式１　構成する授業科目（健康栄養学部・管理栄養学科）"
+          ],
+          "program_name": "修文大学 数理・データサイエンス・AI教育プログラム",
+          "target_departments": [
+            "健康栄養学部・管理栄養学科"
+          ],
+          "completion_requirement": {
+            "text": "「情報処理演習I」(1単位)と「データサイエンス」(1単位)の2単位の講義を取得すること",
+            "minimum_courses": 2,
+            "minimum_credits": 2,
+            "scope": {
+              "raw": "学部・学科によって、修了要件は相違する",
+              "same_across_departments": false,
+              "source_cell": "D9"
+            },
+            "program_required_status": "令和6年度以前又は令和7年度より、履修することが必須のプログラムとして実施"
+          },
+          "courses": [
+            {
+              "name": "データサイエンス",
+              "name_variants": [],
+              "credits": 1,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "1-2",
+                "1-3",
+                "1-4",
+                "1-5",
+                "1-6",
+                "2-1",
+                "2-2",
+                "2-3",
+                "4-4",
+                "4-7",
+                "4-8"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 1,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "1-2",
+                    "1-3",
+                    "1-4",
+                    "1-5",
+                    "1-6",
+                    "2-1",
+                    "2-2",
+                    "2-3",
+                    "4-4",
+                    "4-7",
+                    "4-8"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D23",
+                  "sheet_name": "様式１　構成する授業科目（健康栄養学部・管理栄養学科）"
+                }
+              ]
+            },
+            {
+              "name": "情報処理演習I",
+              "name_variants": [],
+              "credits": 1,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "2-2",
+                "2-3",
+                "3-1",
+                "3-2",
+                "4-1",
+                "4-6",
+                "4-7"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 1,
+                  "model_curriculum_codes": [
+                    "2-2",
+                    "2-3",
+                    "3-1",
+                    "3-2",
+                    "4-1",
+                    "4-6",
+                    "4-7"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D24",
+                  "sheet_name": "様式１　構成する授業科目（健康栄養学部・管理栄養学科）"
+                }
+              ]
+            }
+          ],
+          "course_count": 2,
+          "extraction": {
+            "status": "success",
+            "strategy": "direct_categories",
+            "warnings": [],
+            "source": {
+              "requirement_cells": [
+                "D15"
+              ],
+              "minimums_cell": "B19",
+              "department_cells": [
+                "D11"
+              ],
+              "program_name": {
+                "sheet": "様式１　構成する授業科目（健康栄養学部・管理栄養学科）",
+                "cell": "D5"
+              },
+              "program_required_status_cell": "D13"
+            }
+          }
+        },
+        {
+          "sheet_name": "様式１　構成する授業科目 (看護学部)",
+          "source_sheets": [
+            "様式１　構成する授業科目 (看護学部)"
+          ],
+          "program_name": "修文大学 数理・データサイエンス・AI教育プログラム",
+          "target_departments": [
+            "看護学部・看護学科"
+          ],
+          "completion_requirement": {
+            "text": "「データサイエンス演習」(1単位)と「統計学」(1単位)と「保健統計学」(2単位)の4単位の講義を取得すること",
+            "minimum_courses": 3,
+            "minimum_credits": 4,
+            "scope": {
+              "raw": "学部・学科によって、修了要件は相違する",
+              "same_across_departments": false,
+              "source_cell": "D9"
+            },
+            "program_required_status": "令和6年度以前又は令和7年度より、履修することが必須のプログラムとして実施"
+          },
+          "courses": [
+            {
+              "name": "データサイエンス演習",
+              "name_variants": [],
+              "credits": 1,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "1-2",
+                "1-3",
+                "1-4",
+                "1-5",
+                "1-6",
+                "2-1",
+                "2-2",
+                "2-3",
+                "3-2",
+                "4-1",
+                "4-6"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 1,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "1-2",
+                    "1-3",
+                    "1-4",
+                    "1-5",
+                    "1-6",
+                    "2-1",
+                    "2-2",
+                    "2-3",
+                    "3-2",
+                    "4-1",
+                    "4-6"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D23",
+                  "sheet_name": "様式１　構成する授業科目 (看護学部)"
+                }
+              ]
+            },
+            {
+              "name": "統計学",
+              "name_variants": [],
+              "credits": 1,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "2-1",
+                "3-1"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 1,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "2-1",
+                    "3-1"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D24",
+                  "sheet_name": "様式１　構成する授業科目 (看護学部)"
+                }
+              ]
+            },
+            {
+              "name": "保健統計学",
+              "name_variants": [],
+              "credits": 2,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-4",
+                "2-1",
+                "2-2",
+                "2-3"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 2,
+                  "model_curriculum_codes": [
+                    "1-4",
+                    "2-1",
+                    "2-2",
+                    "2-3"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D25",
+                  "sheet_name": "様式１　構成する授業科目 (看護学部)"
+                }
+              ]
+            }
+          ],
+          "course_count": 3,
+          "extraction": {
+            "status": "success",
+            "strategy": "direct_categories",
+            "warnings": [],
+            "source": {
+              "requirement_cells": [
+                "D15"
+              ],
+              "minimums_cell": "B19",
+              "department_cells": [
+                "D11"
+              ],
+              "program_name": {
+                "sheet": "様式１　構成する授業科目 (看護学部)",
+                "cell": "D5"
+              },
+              "program_required_status_cell": "D13"
+            }
+          }
+        },
+        {
+          "sheet_name": "様式１　構成する授業科目 (医療科学部) ",
+          "source_sheets": [
+            "様式１　構成する授業科目 (医療科学部) "
+          ],
+          "program_name": "修文大学 数理・データサイエンス・AI教育プログラム",
+          "target_departments": [
+            "医療科学部"
+          ],
+          "completion_requirement": {
+            "text": "「情報科学」(1単位)と「データサイエンス」(1単位)の2単位の講義を取得すること",
+            "minimum_courses": 2,
+            "minimum_credits": 2,
+            "scope": {
+              "raw": "学部・学科によって、修了要件は相違する",
+              "same_across_departments": false,
+              "source_cell": "D9"
+            },
+            "program_required_status": "令和6年度以前又は令和7年度より、履修することが必須のプログラムとして実施"
+          },
+          "courses": [
+            {
+              "name": "データサイエンス",
+              "name_variants": [],
+              "credits": 1,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "1-2",
+                "1-3",
+                "1-4",
+                "1-5",
+                "1-6",
+                "2-1",
+                "2-2",
+                "2-3",
+                "3-2",
+                "4-1",
+                "4-8"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 1,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "1-2",
+                    "1-3",
+                    "1-4",
+                    "1-5",
+                    "1-6",
+                    "2-1",
+                    "2-2",
+                    "2-3",
+                    "3-2",
+                    "4-1",
+                    "4-8"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D23",
+                  "sheet_name": "様式１　構成する授業科目 (医療科学部) "
+                }
+              ]
+            },
+            {
+              "name": "情報科学",
+              "name_variants": [],
+              "credits": 1,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "1-2",
+                "1-3",
+                "1-4",
+                "3-1",
+                "3-2",
+                "4-1",
+                "4-6"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 1,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "1-2",
+                    "1-3",
+                    "1-4",
+                    "3-1",
+                    "3-2",
+                    "4-1",
+                    "4-6"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D24",
+                  "sheet_name": "様式１　構成する授業科目 (医療科学部) "
+                }
+              ]
+            }
+          ],
+          "course_count": 2,
+          "extraction": {
+            "status": "success",
+            "strategy": "direct_categories",
+            "warnings": [],
+            "source": {
+              "requirement_cells": [
+                "D15"
+              ],
+              "minimums_cell": "B19",
+              "department_cells": [
+                "D11"
+              ],
+              "program_name": {
+                "sheet": "様式１　構成する授業科目 (医療科学部) ",
+                "cell": "D5"
+              },
+              "program_required_status_cell": "D13"
+            }
+          }
+        }
+      ],
+      "extraction": {
+        "status": "success",
+        "warnings": [],
+        "source": {
+          "university_name": {
+            "sheet": "様式１　構成する授業科目（健康栄養学部・管理栄養学科）",
+            "cell": "D4"
+          }
+        }
+      }
+    },
+    {
+      "university_name": "創価大学 通信教育部",
+      "source_file": "literacy_application/r7_pre/創価大学通信教育部.xlsx",
+      "programs": [
+        {
+          "sheet_name": "様式１　構成する授業科目",
+          "source_sheets": [
+            "様式１　構成する授業科目"
+          ],
+          "program_name": "データサイエンス入門",
+          "target_departments": [],
+          "completion_requirement": {
+            "text": "データサイエンス入門I(1単位)とデータサイエンス入門II(1単位)の2科目を修得すること",
+            "minimum_courses": 2,
+            "minimum_credits": 2,
+            "scope": {
+              "raw": "学部・学科によって、修了要件は相違しない",
+              "same_across_departments": true,
+              "source_cell": "D9"
+            },
+            "program_required_status": "令和6年度以前又は令和7年度より、履修することが必須のプログラムとして実施"
+          },
+          "courses": [
+            {
+              "name": "データサイエンス入門I",
+              "name_variants": [],
+              "credits": 1,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "1-2",
+                "1-3",
+                "1-4",
+                "1-5",
+                "1-6",
+                "3-1",
+                "3-2"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 1,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "1-2",
+                    "1-3",
+                    "1-4",
+                    "1-5",
+                    "1-6",
+                    "3-1",
+                    "3-2"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D23",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            },
+            {
+              "name": "データサイエンス入門II",
+              "name_variants": [],
+              "credits": 1,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "2-1",
+                "2-2",
+                "2-3"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 1,
+                  "model_curriculum_codes": [
+                    "2-1",
+                    "2-2",
+                    "2-3"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D24",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            }
+          ],
+          "course_count": 2,
+          "extraction": {
+            "status": "success",
+            "strategy": "direct_categories",
+            "warnings": [],
+            "source": {
+              "requirement_cells": [
+                "D15"
+              ],
+              "minimums_cell": "B19",
+              "department_cells": [],
+              "program_name": {
+                "sheet": "様式１　構成する授業科目",
+                "cell": "D5"
+              },
+              "program_required_status_cell": "D13"
+            }
+          }
+        }
+      ],
+      "extraction": {
+        "status": "success",
+        "warnings": [],
+        "source": {
+          "university_name": {
+            "sheet": "様式１　構成する授業科目",
+            "cell": "D4"
+          }
+        }
+      }
+    },
+    {
+      "university_name": "北陸学院大学",
+      "source_file": "literacy_application/r7_pre/北陸学院大学.xlsx",
+      "programs": [
+        {
+          "sheet_name": "様式１　構成する授業科目",
+          "source_sheets": [
+            "様式１　構成する授業科目"
+          ],
+          "program_name": "北陸学院大学AIリテラシープログラム",
+          "target_departments": [
+            "教育学部幼児教育学科、教育学部初等中等教育学科、社会学部社会学科、健康科学部栄養学科"
+          ],
+          "completion_requirement": {
+            "text": "「データサイエンス入門」の2単位を取得すること。",
+            "minimum_courses": 1,
+            "minimum_credits": 2,
+            "scope": {
+              "raw": "学部・学科によって、修了要件は相違しない",
+              "same_across_departments": true,
+              "source_cell": "D9"
+            },
+            "program_required_status": "令和6年度以前又は令和7年度より、履修することが必須のプログラムとして実施"
+          },
+          "courses": [
+            {
+              "name": "データサイエンス入門",
+              "name_variants": [],
+              "credits": 2,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "1-2",
+                "1-3",
+                "1-4",
+                "1-5",
+                "1-6",
+                "2-1",
+                "2-2",
+                "2-3",
+                "3-1",
+                "3-2"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 2,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "1-2",
+                    "1-3",
+                    "1-4",
+                    "1-5",
+                    "1-6",
+                    "2-1",
+                    "2-2",
+                    "2-3",
+                    "3-1",
+                    "3-2"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D23",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            }
+          ],
+          "course_count": 1,
+          "extraction": {
+            "status": "success",
+            "strategy": "direct_categories",
+            "warnings": [],
+            "source": {
+              "requirement_cells": [
+                "D15"
+              ],
+              "minimums_cell": "B19",
+              "department_cells": [
+                "D11"
+              ],
+              "program_name": {
+                "sheet": "様式１　構成する授業科目",
+                "cell": "D5"
+              },
+              "program_required_status_cell": "D13"
+            }
+          }
+        }
+      ],
+      "extraction": {
+        "status": "success",
+        "warnings": [],
+        "source": {
+          "university_name": {
+            "sheet": "様式１　構成する授業科目",
+            "cell": "D4"
+          }
+        }
+      }
+    },
+    {
+      "university_name": "名古屋学芸大学",
+      "source_file": "literacy_application/r7_pre/名古屋学芸大学.xlsx",
+      "programs": [
+        {
+          "sheet_name": "様式１　構成する授業科目",
+          "source_sheets": [
+            "様式１　構成する授業科目"
+          ],
+          "program_name": "データ数理・AI教育プログラム",
+          "target_departments": [
+            "管理栄養学部、メディア造形学部、ヒューマンケア学部、看護学部"
+          ],
+          "completion_requirement": {
+            "text": "情報社会の基礎(2単位)、データ数理演習(2単位)、2科目(計4単位)を取得すること",
+            "minimum_courses": 2,
+            "minimum_credits": 4,
+            "scope": {
+              "raw": "学部・学科によって、修了要件は相違しない",
+              "same_across_departments": true,
+              "source_cell": "D9"
+            },
+            "program_required_status": "令和10年度以降に履修必須とする計画、又は未定"
+          },
+          "courses": [
+            {
+              "name": "情報社会の基礎",
+              "name_variants": [],
+              "credits": 2,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "1-2",
+                "1-3",
+                "1-4",
+                "1-5",
+                "1-6",
+                "3-1",
+                "3-2"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 2,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "1-2",
+                    "1-3",
+                    "1-4",
+                    "1-5",
+                    "1-6",
+                    "3-1",
+                    "3-2"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D23",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            },
+            {
+              "name": "データ数理演習",
+              "name_variants": [],
+              "credits": 2,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-4",
+                "2-1",
+                "2-2",
+                "2-3"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 2,
+                  "model_curriculum_codes": [
+                    "1-4",
+                    "2-1",
+                    "2-2",
+                    "2-3"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D24",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            }
+          ],
+          "course_count": 2,
+          "extraction": {
+            "status": "success",
+            "strategy": "direct_categories",
+            "warnings": [],
+            "source": {
+              "requirement_cells": [
+                "D15"
+              ],
+              "minimums_cell": "B19",
+              "department_cells": [
+                "D11"
+              ],
+              "program_name": {
+                "sheet": "様式１　構成する授業科目",
+                "cell": "D5"
+              },
+              "program_required_status_cell": "D13"
+            }
+          }
+        }
+      ],
+      "extraction": {
+        "status": "success",
+        "warnings": [],
+        "source": {
+          "university_name": {
+            "sheet": "様式１　構成する授業科目",
+            "cell": "D4"
+          }
+        }
+      }
+    },
+    {
+      "university_name": "日本大学",
+      "source_file": "literacy_application/r7_pre/日本大学.xlsx",
+      "programs": [
+        {
+          "sheet_name": "様式１　構成する授業科目",
+          "source_sheets": [
+            "様式１　構成する授業科目"
+          ],
+          "program_name": "数理・データサイエンス・AI教育リテラシープログラム",
+          "target_departments": [],
+          "completion_requirement": {
+            "text": "プログラムを構成する授業科目「データサイエンスの世界」の2単位を修得すること。",
+            "minimum_courses": 1,
+            "minimum_credits": 2,
+            "scope": {
+              "raw": "学部・学科によって、修了要件は相違しない",
+              "same_across_departments": true,
+              "source_cell": "D9"
+            },
+            "program_required_status": "令和10年度以降に履修必須とする計画、又は未定"
+          },
+          "courses": [
+            {
+              "name": "データサイエンスの世界",
+              "name_variants": [],
+              "credits": 2,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "1-2",
+                "1-3",
+                "1-4",
+                "1-5",
+                "1-6",
+                "2-1",
+                "2-2",
+                "2-3",
+                "3-1",
+                "3-2",
+                "4-1",
+                "4-3",
+                "4-5",
+                "4-6",
+                "4-7"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 2,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "1-2",
+                    "1-3",
+                    "1-4",
+                    "1-5",
+                    "1-6",
+                    "2-1",
+                    "2-2",
+                    "2-3",
+                    "3-1",
+                    "3-2",
+                    "4-1",
+                    "4-3",
+                    "4-5",
+                    "4-6",
+                    "4-7"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D23",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            }
+          ],
+          "course_count": 1,
+          "extraction": {
+            "status": "success",
+            "strategy": "direct_categories",
+            "warnings": [],
+            "source": {
+              "requirement_cells": [
+                "D15"
+              ],
+              "minimums_cell": "B19",
+              "department_cells": [],
+              "program_name": {
+                "sheet": "様式１　構成する授業科目",
+                "cell": "D5"
+              },
+              "program_required_status_cell": "D13"
+            }
+          }
+        }
+      ],
+      "extraction": {
+        "status": "success",
+        "warnings": [],
+        "source": {
+          "university_name": {
+            "sheet": "様式１　構成する授業科目",
+            "cell": "D4"
+          }
+        }
+      }
+    },
+    {
+      "university_name": "日本大学短期大学部",
+      "source_file": "literacy_application/r7_pre/日本大学短期大学部.xlsx",
+      "programs": [
+        {
+          "sheet_name": "様式１　構成する授業科目",
+          "source_sheets": [
+            "様式１　構成する授業科目"
+          ],
+          "program_name": "数理・データサイエンス・AI教育リテラシープログラム",
+          "target_departments": [],
+          "completion_requirement": {
+            "text": "プログラムを構成する授業科目「データサイエンスの世界」の2単位を修得すること。",
+            "minimum_courses": 1,
+            "minimum_credits": 2,
+            "scope": {
+              "raw": "学部・学科によって、修了要件は相違しない",
+              "same_across_departments": true,
+              "source_cell": "D9"
+            },
+            "program_required_status": "令和10年度以降に履修必須とする計画、又は未定"
+          },
+          "courses": [
+            {
+              "name": "データサイエンスの世界",
+              "name_variants": [],
+              "credits": 2,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "1-2",
+                "1-3",
+                "1-4",
+                "1-5",
+                "1-6",
+                "2-1",
+                "2-2",
+                "2-3",
+                "3-1",
+                "3-2",
+                "4-1",
+                "4-3",
+                "4-5",
+                "4-6",
+                "4-7"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 2,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "1-2",
+                    "1-3",
+                    "1-4",
+                    "1-5",
+                    "1-6",
+                    "2-1",
+                    "2-2",
+                    "2-3",
+                    "3-1",
+                    "3-2",
+                    "4-1",
+                    "4-3",
+                    "4-5",
+                    "4-6",
+                    "4-7"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D23",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            }
+          ],
+          "course_count": 1,
+          "extraction": {
+            "status": "success",
+            "strategy": "direct_categories",
+            "warnings": [],
+            "source": {
+              "requirement_cells": [
+                "D15"
+              ],
+              "minimums_cell": "B19",
+              "department_cells": [],
+              "program_name": {
+                "sheet": "様式１　構成する授業科目",
+                "cell": "D5"
+              },
+              "program_required_status_cell": "D13"
+            }
+          }
+        }
+      ],
+      "extraction": {
+        "status": "success",
+        "warnings": [],
+        "source": {
+          "university_name": {
+            "sheet": "様式１　構成する授業科目",
+            "cell": "D4"
+          }
+        }
+      }
+    },
+    {
+      "university_name": "東北文化学園大学",
+      "source_file": "literacy_application/r7_pre/東北文化学園大学.xlsx",
+      "programs": [
+        {
+          "sheet_name": "様式１　構成する授業科目",
+          "source_sheets": [
+            "様式１　構成する授業科目"
+          ],
+          "program_name": "東北文化学園大学 AI教育プログラム(リテラシーレベル)",
+          "target_departments": [],
+          "completion_requirement": {
+            "text": "必須科目2単位を修得すること。",
+            "minimum_courses": 1,
+            "minimum_credits": 2,
+            "scope": {
+              "raw": "学部・学科によって、修了要件は相違しない",
+              "same_across_departments": true,
+              "source_cell": "D9"
+            },
+            "program_required_status": "令和6年度以前又は令和7年度より、履修することが必須のプログラムとして実施"
+          },
+          "courses": [
+            {
+              "name": "データサイエンス入門",
+              "name_variants": [],
+              "credits": 2,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "1-2",
+                "1-3",
+                "1-4",
+                "1-5",
+                "1-6",
+                "2-1",
+                "2-2",
+                "2-3",
+                "3-1",
+                "3-2"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 2,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "1-2",
+                    "1-3",
+                    "1-4",
+                    "1-5",
+                    "1-6",
+                    "2-1",
+                    "2-2",
+                    "2-3",
+                    "3-1",
+                    "3-2"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D23",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            },
+            {
+              "name": "プログラミング方法論I",
+              "name_variants": [],
+              "credits": 2,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(3)選択科目(プログラムを構成する科目のうち「必須科目」「選択必須科目」のいずれにも該当しない科目)"
+              ],
+              "model_curriculum_codes": [
+                "4-3"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 2,
+                  "model_curriculum_codes": [
+                    "4-3"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D43",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            },
+            {
+              "name": "プログラミング方法論II",
+              "name_variants": [],
+              "credits": 2,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(3)選択科目(プログラムを構成する科目のうち「必須科目」「選択必須科目」のいずれにも該当しない科目)"
+              ],
+              "model_curriculum_codes": [
+                "4-3"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 2,
+                  "model_curriculum_codes": [
+                    "4-3"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D44",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            }
+          ],
+          "course_count": 3,
+          "extraction": {
+            "status": "success",
+            "strategy": "direct_categories",
+            "warnings": [],
+            "source": {
+              "requirement_cells": [
+                "D15"
+              ],
+              "minimums_cell": "B19",
+              "department_cells": [],
+              "program_name": {
+                "sheet": "様式１　構成する授業科目",
+                "cell": "D5"
+              },
+              "program_required_status_cell": "D13"
+            }
+          }
+        }
+      ],
+      "extraction": {
+        "status": "success",
+        "warnings": [],
+        "source": {
+          "university_name": {
+            "sheet": "様式１　構成する授業科目",
+            "cell": "D4"
+          }
+        }
+      }
+    },
+    {
+      "university_name": "美作大学",
+      "source_file": "literacy_application/r7_pre/美作大学.xlsx",
+      "programs": [
+        {
+          "sheet_name": "様式１　構成する授業科目",
+          "source_sheets": [
+            "様式１　構成する授業科目"
+          ],
+          "program_name": "美作大学 数理・データサイエンス・AI教育プログラム(リテラシーレベル)",
+          "target_departments": [],
+          "completion_requirement": {
+            "text": "対象科目(「情報リテラシー概論」1単位、「調査と統計」2単位)を両方修得すること",
+            "minimum_courses": 2,
+            "minimum_credits": 3,
+            "scope": {
+              "raw": "学部・学科によって、修了要件は相違しない",
+              "same_across_departments": true,
+              "source_cell": "D9"
+            },
+            "program_required_status": "令和10年度以降に履修必須とする計画、又は未定"
+          },
+          "courses": [
+            {
+              "name": "情報リテラシー概論",
+              "name_variants": [],
+              "credits": 1,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "1-2",
+                "1-3",
+                "1-4",
+                "1-5",
+                "1-6",
+                "3-1",
+                "3-2"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 1,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "1-2",
+                    "1-3",
+                    "1-4",
+                    "1-5",
+                    "1-6",
+                    "3-1",
+                    "3-2"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D23",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            },
+            {
+              "name": "調査と統計",
+              "name_variants": [],
+              "credits": 2,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "1-2",
+                "1-4",
+                "2-1",
+                "2-2",
+                "2-3"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 2,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "1-2",
+                    "1-4",
+                    "2-1",
+                    "2-2",
+                    "2-3"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D24",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            }
+          ],
+          "course_count": 2,
+          "extraction": {
+            "status": "success",
+            "strategy": "direct_categories",
+            "warnings": [],
+            "source": {
+              "requirement_cells": [
+                "D15"
+              ],
+              "minimums_cell": "B19",
+              "department_cells": [],
+              "program_name": {
+                "sheet": "様式１　構成する授業科目",
+                "cell": "D5"
+              },
+              "program_required_status_cell": "D13"
+            }
+          }
+        }
+      ],
+      "extraction": {
+        "status": "success",
+        "warnings": [],
+        "source": {
+          "university_name": {
+            "sheet": "様式１　構成する授業科目",
+            "cell": "D4"
+          }
+        }
+      }
+    },
+    {
+      "university_name": "聖カタリナ大学",
+      "source_file": "literacy_application/r7_pre/聖カタリナ大学.xlsx",
+      "programs": [
+        {
+          "sheet_name": "様式１　構成する授業科目",
+          "source_sheets": [
+            "様式１　構成する授業科目"
+          ],
+          "program_name": "聖カタリナ大学数理・データサイエンス・AI教育プログラム(リテラシーレベル)",
+          "target_departments": [],
+          "completion_requirement": {
+            "text": "必須科目2科目(「IT基礎講座」(2単位)および「情報リテラシーII」(1単位))の計3単位の単位を修得すること。なお,当該2科目は各学科およびクラス指定のものを受講すること。各科目の内容は同一である。 IT基礎講座(IT基礎講座【現人】,IT基礎講座【健スポ】,IT基礎講座【看護】) 情報リテラシーII(情報リテラシーII【現人】,情報リテラシーII【健スポA】,情報リテラシーII【健スポB】,情報リテラシーII(A),情報リテラシーII(B))",
+            "minimum_courses": 2,
+            "minimum_credits": 3,
+            "scope": {
+              "raw": "学部・学科によって、修了要件は相違しない",
+              "same_across_departments": true,
+              "source_cell": "D9"
+            },
+            "program_required_status": "令和10年度以降に履修必須とする計画,又は未定"
+          },
+          "courses": [
+            {
+              "name": "IT基礎講座(IT基礎講座【現人】,IT基礎講座【健スポ】,IT基礎講座【看護】)",
+              "name_variants": [],
+              "credits": 2,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "1-2",
+                "1-3",
+                "1-4",
+                "1-5",
+                "1-6",
+                "2-1",
+                "2-2",
+                "3-1",
+                "3-2"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 2,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "1-2",
+                    "1-3",
+                    "1-4",
+                    "1-5",
+                    "1-6",
+                    "2-1",
+                    "2-2",
+                    "3-1",
+                    "3-2"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D23",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            },
+            {
+              "name": "情報リテラシーII(情報リテラシーII【現人】,情報リテラシーII【健スポA】,情報リテラシーII【健スポB】,情報リテラシーII(A),情報リテラシーII(B))",
+              "name_variants": [],
+              "credits": 1,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "1-2",
+                "1-6",
+                "2-1",
+                "2-2",
+                "2-3",
+                "3-1",
+                "3-2"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 1,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "1-2",
+                    "1-6",
+                    "2-1",
+                    "2-2",
+                    "2-3",
+                    "3-1",
+                    "3-2"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D24",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            }
+          ],
+          "course_count": 2,
+          "extraction": {
+            "status": "success",
+            "strategy": "direct_categories",
+            "warnings": [],
+            "source": {
+              "requirement_cells": [
+                "D15"
+              ],
+              "minimums_cell": "B19",
+              "department_cells": [],
+              "program_name": {
+                "sheet": "様式１　構成する授業科目",
+                "cell": "D5"
+              },
+              "program_required_status_cell": "D13"
+            }
+          }
+        }
+      ],
+      "extraction": {
+        "status": "success",
+        "warnings": [],
+        "source": {
+          "university_name": {
+            "sheet": "様式１　構成する授業科目",
+            "cell": "D4"
+          }
+        }
+      }
+    },
+    {
+      "university_name": "聖学院大学",
+      "source_file": "literacy_application/r7_pre/聖学院大学.xlsx",
+      "programs": [
+        {
+          "sheet_name": "様式１　構成する授業科目",
+          "source_sheets": [
+            "様式１　構成する授業科目"
+          ],
+          "program_name": "聖学院AI・データサイエンスプログラム(リテラシーレベル)",
+          "target_departments": [],
+          "completion_requirement": {
+            "text": "「AIと情報リテラシー」および「データサイエンス入門A」の2科目4単位を修得すること。",
+            "minimum_courses": 2,
+            "minimum_credits": 4,
+            "scope": {
+              "raw": "学部・学科によって、修了要件は相違しない",
+              "same_across_departments": true,
+              "source_cell": "D9"
+            },
+            "program_required_status": "令和9年度までに履修必須とする計画"
+          },
+          "courses": [
+            {
+              "name": "AIと情報リテラシー",
+              "name_variants": [],
+              "credits": 2,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "1-3",
+                "1-4",
+                "1-5",
+                "1-6",
+                "3-1",
+                "3-2",
+                "4-5",
+                "4-6",
+                "4-7",
+                "4-8",
+                "4-9"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 2,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "1-3",
+                    "1-4",
+                    "1-5",
+                    "1-6",
+                    "3-1",
+                    "3-2",
+                    "4-5",
+                    "4-6",
+                    "4-7",
+                    "4-8",
+                    "4-9"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D23",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            },
+            {
+              "name": "データサイエンス入門A",
+              "name_variants": [],
+              "credits": 2,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "1-2",
+                "1-3",
+                "1-4",
+                "1-5",
+                "2-1",
+                "2-2",
+                "2-3",
+                "3-2",
+                "4-4",
+                "4-7"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 2,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "1-2",
+                    "1-3",
+                    "1-4",
+                    "1-5",
+                    "2-1",
+                    "2-2",
+                    "2-3",
+                    "3-2",
+                    "4-4",
+                    "4-7"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D24",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            }
+          ],
+          "course_count": 2,
+          "extraction": {
+            "status": "success",
+            "strategy": "direct_categories",
+            "warnings": [],
+            "source": {
+              "requirement_cells": [
+                "D15"
+              ],
+              "minimums_cell": "B19",
+              "department_cells": [],
+              "program_name": {
+                "sheet": "様式１　構成する授業科目",
+                "cell": "D5"
+              },
+              "program_required_status_cell": "D13"
+            }
+          }
+        }
+      ],
+      "extraction": {
+        "status": "success",
+        "warnings": [],
+        "source": {
+          "university_name": {
+            "sheet": "様式１　構成する授業科目",
+            "cell": "D4"
+          }
+        }
+      }
+    },
+    {
+      "university_name": "聖泉大学",
+      "source_file": "literacy_application/r7_pre/聖泉大学.xlsx",
+      "programs": [
+        {
+          "sheet_name": "様式１　構成する授業科目",
+          "source_sheets": [
+            "様式１　構成する授業科目"
+          ],
+          "program_name": "聖泉大学データサイエンス・AI教育プログラム",
+          "target_departments": [],
+          "completion_requirement": {
+            "text": "「情報処理入門(1単位)」「情報処理演習(1単位)」を修得すること",
+            "minimum_courses": 2,
+            "minimum_credits": 2,
+            "scope": {
+              "raw": "学部・学科によって、修了要件は相違しない",
+              "same_across_departments": true,
+              "source_cell": "D9"
+            },
+            "program_required_status": "令和9年度までに履修必須とする計画"
+          },
+          "courses": [
+            {
+              "name": "情報処理入門",
+              "name_variants": [],
+              "credits": 1,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "1-2",
+                "1-3",
+                "1-5",
+                "2-2",
+                "2-3",
+                "3-1",
+                "3-2"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 1,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "1-2",
+                    "1-3",
+                    "1-5",
+                    "2-2",
+                    "2-3",
+                    "3-1",
+                    "3-2"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D23",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            },
+            {
+              "name": "情報処理演習",
+              "name_variants": [],
+              "credits": 1,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "1-2",
+                "1-3",
+                "1-4",
+                "1-5",
+                "1-6",
+                "2-1",
+                "2-2",
+                "2-3",
+                "3-1",
+                "3-2"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 1,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "1-2",
+                    "1-3",
+                    "1-4",
+                    "1-5",
+                    "1-6",
+                    "2-1",
+                    "2-2",
+                    "2-3",
+                    "3-1",
+                    "3-2"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D24",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            }
+          ],
+          "course_count": 2,
+          "extraction": {
+            "status": "success",
+            "strategy": "direct_categories",
+            "warnings": [],
+            "source": {
+              "requirement_cells": [
+                "D15"
+              ],
+              "minimums_cell": "B19",
+              "department_cells": [],
+              "program_name": {
+                "sheet": "様式１　構成する授業科目",
+                "cell": "D5"
+              },
+              "program_required_status_cell": "D13"
+            }
+          }
+        }
+      ],
+      "extraction": {
+        "status": "success",
+        "warnings": [],
+        "source": {
+          "university_name": {
+            "sheet": "様式１　構成する授業科目",
+            "cell": "D4"
+          }
+        }
+      }
+    },
+    {
+      "university_name": "長崎純心大学",
+      "source_file": "literacy_application/r7_pre/長崎純心大学.xlsx",
+      "programs": [
+        {
+          "sheet_name": "様式１　構成する授業科目",
+          "source_sheets": [
+            "様式１　構成する授業科目"
+          ],
+          "program_name": "データサイエンス・AI教育プログラム",
+          "target_departments": [],
+          "completion_requirement": {
+            "text": "「AIとデータサイエンス入門」の単位を取得すること",
+            "minimum_courses": 1,
+            "minimum_credits": 2,
+            "scope": {
+              "raw": "学部・学科によって、修了要件は相違しない",
+              "same_across_departments": true,
+              "source_cell": "D9"
+            },
+            "program_required_status": "令和9年度までに履修必須とする計画"
+          },
+          "courses": [
+            {
+              "name": "AIとデータサイエンス入門",
+              "name_variants": [],
+              "credits": 2,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "1-2",
+                "1-3",
+                "1-4",
+                "1-5",
+                "1-6",
+                "2-1",
+                "2-2",
+                "2-3",
+                "3-1",
+                "3-2"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 2,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "1-2",
+                    "1-3",
+                    "1-4",
+                    "1-5",
+                    "1-6",
+                    "2-1",
+                    "2-2",
+                    "2-3",
+                    "3-1",
+                    "3-2"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D23",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            }
+          ],
+          "course_count": 1,
+          "extraction": {
+            "status": "success",
+            "strategy": "direct_categories",
+            "warnings": [],
+            "source": {
+              "requirement_cells": [
+                "D15"
+              ],
+              "minimums_cell": "B19",
+              "department_cells": [],
+              "program_name": {
+                "sheet": "様式１　構成する授業科目",
+                "cell": "D5"
+              },
+              "program_required_status_cell": "D13"
+            }
+          }
+        }
+      ],
+      "extraction": {
+        "status": "success",
+        "warnings": [],
+        "source": {
+          "university_name": {
+            "sheet": "様式１　構成する授業科目",
+            "cell": "D4"
+          }
+        }
+      }
+    },
+    {
+      "university_name": "開智国際大学",
+      "source_file": "literacy_application/r7_pre/開智国際大学.xlsx",
+      "programs": [
+        {
+          "sheet_name": "様式１　構成する授業科目",
+          "source_sheets": [
+            "様式１　構成する授業科目"
+          ],
+          "program_name": "開智数理・データサイエンス・AI教育プログラム",
+          "target_departments": [],
+          "completion_requirement": {
+            "text": "プログラムを構成する授業科目である「データサイエンス概論A」2単位を修得すること。",
+            "minimum_courses": 1,
+            "minimum_credits": 2,
+            "scope": {
+              "raw": "学部・学科によって、修了要件は相違しない",
+              "same_across_departments": true,
+              "source_cell": "D9"
+            },
+            "program_required_status": "令和10年度以降に履修必須とする計画、又は未定"
+          },
+          "courses": [
+            {
+              "name": "データサイエンス概論A",
+              "name_variants": [],
+              "credits": 2,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "1-2",
+                "1-3",
+                "1-4",
+                "1-5",
+                "1-6",
+                "2-1",
+                "2-2",
+                "2-3",
+                "3-1",
+                "3-2"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 2,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "1-2",
+                    "1-3",
+                    "1-4",
+                    "1-5",
+                    "1-6",
+                    "2-1",
+                    "2-2",
+                    "2-3",
+                    "3-1",
+                    "3-2"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D23",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            },
+            {
+              "name": "データサイエンス概論B",
+              "name_variants": [],
+              "credits": 2,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(3)選択科目(プログラムを構成する科目のうち「必須科目」「選択必須科目」のいずれにも該当しない科目)"
+              ],
+              "model_curriculum_codes": [
+                "4-2",
+                "4-5",
+                "4-6",
+                "4-7",
+                "4-8",
+                "4-9"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 2,
+                  "model_curriculum_codes": [
+                    "4-2",
+                    "4-5",
+                    "4-6",
+                    "4-7",
+                    "4-8",
+                    "4-9"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D43",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            },
+            {
+              "name": "AI概論",
+              "name_variants": [],
+              "credits": 2,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(3)選択科目(プログラムを構成する科目のうち「必須科目」「選択必須科目」のいずれにも該当しない科目)"
+              ],
+              "model_curriculum_codes": [
+                "4-4",
+                "4-5",
+                "4-6",
+                "4-8",
+                "4-9"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 2,
+                  "model_curriculum_codes": [
+                    "4-4",
+                    "4-5",
+                    "4-6",
+                    "4-8",
+                    "4-9"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D44",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            }
+          ],
+          "course_count": 3,
+          "extraction": {
+            "status": "success",
+            "strategy": "direct_categories",
+            "warnings": [],
+            "source": {
+              "requirement_cells": [
+                "D15"
+              ],
+              "minimums_cell": "B19",
+              "department_cells": [],
+              "program_name": {
+                "sheet": "様式１　構成する授業科目",
+                "cell": "D5"
+              },
+              "program_required_status_cell": "D13"
+            }
+          }
+        }
+      ],
+      "extraction": {
+        "status": "success",
+        "warnings": [],
+        "source": {
+          "university_name": {
+            "sheet": "様式１　構成する授業科目",
+            "cell": "D4"
+          }
+        }
+      }
+    },
+    {
+      "university_name": "関西外国語大学",
+      "source_file": "literacy_application/r7_pre/関西外国語大学.xlsx",
+      "programs": [
+        {
+          "sheet_name": "様式１　構成する授業科目",
+          "source_sheets": [
+            "様式１　構成する授業科目"
+          ],
+          "program_name": "数理・データサイエンス・AI教育プログラム",
+          "target_departments": [],
+          "completion_requirement": {
+            "text": "「数理・データサイエンス・AI教育プログラム」として開講する「総合科目F」の2単位を取得すること",
+            "minimum_courses": 1,
+            "minimum_credits": 2,
+            "scope": {
+              "raw": "学部・学科によって、修了要件は相違しない",
+              "same_across_departments": true,
+              "source_cell": "D9"
+            },
+            "program_required_status": "令和10年度以降に履修必須とする計画、又は未定"
+          },
+          "courses": [
+            {
+              "name": "総合科目F",
+              "name_variants": [],
+              "credits": 2,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "1-2",
+                "1-3",
+                "1-4",
+                "1-5",
+                "1-6",
+                "2-1",
+                "2-2",
+                "2-3",
+                "3-1",
+                "3-2"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 2,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "1-2",
+                    "1-3",
+                    "1-4",
+                    "1-5",
+                    "1-6",
+                    "2-1",
+                    "2-2",
+                    "2-3",
+                    "3-1",
+                    "3-2"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D23",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            }
+          ],
+          "course_count": 1,
+          "extraction": {
+            "status": "success",
+            "strategy": "direct_categories",
+            "warnings": [],
+            "source": {
+              "requirement_cells": [
+                "D15"
+              ],
+              "minimums_cell": "B19",
+              "department_cells": [],
+              "program_name": {
+                "sheet": "様式１　構成する授業科目",
+                "cell": "D5"
+              },
+              "program_required_status_cell": "D13"
+            }
+          }
+        }
+      ],
+      "extraction": {
+        "status": "success",
+        "warnings": [],
+        "source": {
+          "university_name": {
+            "sheet": "様式１　構成する授業科目",
+            "cell": "D4"
+          }
+        }
+      }
+    },
+    {
+      "university_name": "関西外国語大学短期大学部",
+      "source_file": "literacy_application/r7_pre/関西外国語大学短期大学部.xlsx",
+      "programs": [
+        {
+          "sheet_name": "様式１　構成する授業科目",
+          "source_sheets": [
+            "様式１　構成する授業科目"
+          ],
+          "program_name": "数理・データサイエンス・AI教育プログラム",
+          "target_departments": [],
+          "completion_requirement": {
+            "text": "「数理・データサイエンス・AI教育プログラム」として開講する「総合科目D」の2単位を取得すること",
+            "minimum_courses": 1,
+            "minimum_credits": 2,
+            "scope": {
+              "raw": "学部・学科によって、修了要件は相違しない",
+              "same_across_departments": true,
+              "source_cell": "D9"
+            },
+            "program_required_status": "令和10年度以降に履修必須とする計画、又は未定"
+          },
+          "courses": [
+            {
+              "name": "総合科目D",
+              "name_variants": [],
+              "credits": 2,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "1-2",
+                "1-3",
+                "1-4",
+                "1-5",
+                "1-6",
+                "2-1",
+                "2-2",
+                "2-3",
+                "3-1",
+                "3-2"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 2,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "1-2",
+                    "1-3",
+                    "1-4",
+                    "1-5",
+                    "1-6",
+                    "2-1",
+                    "2-2",
+                    "2-3",
+                    "3-1",
+                    "3-2"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D23",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            }
+          ],
+          "course_count": 1,
+          "extraction": {
+            "status": "success",
+            "strategy": "direct_categories",
+            "warnings": [],
+            "source": {
+              "requirement_cells": [
+                "D15"
+              ],
+              "minimums_cell": "B19",
+              "department_cells": [],
+              "program_name": {
+                "sheet": "様式１　構成する授業科目",
+                "cell": "D5"
+              },
+              "program_required_status_cell": "D13"
+            }
+          }
+        }
+      ],
+      "extraction": {
+        "status": "success",
+        "warnings": [],
+        "source": {
+          "university_name": {
+            "sheet": "様式１　構成する授業科目",
+            "cell": "D4"
+          }
+        }
+      }
+    },
+    {
+      "university_name": "静岡福祉大学",
+      "source_file": "literacy_application/r7_pre/静岡福祉大学.xlsx",
+      "programs": [
+        {
+          "sheet_name": "様式１　構成する授業科目",
+          "source_sheets": [
+            "様式１　構成する授業科目"
+          ],
+          "program_name": "静岡福祉大学数理・データサイエンス・AI教育プログラム(リテラシー)",
+          "target_departments": [],
+          "completion_requirement": {
+            "text": "プログラムを構成する全学共通基礎科目「データサイエンスの基礎(2単位)」の単位を取得すること。",
+            "minimum_courses": 1,
+            "minimum_credits": 2,
+            "scope": {
+              "raw": "学部・学科によって、修了要件は相違しない",
+              "same_across_departments": true,
+              "source_cell": "D9"
+            },
+            "program_required_status": "令和10年度以降に履修必須とする計画、又は未定"
+          },
+          "courses": [
+            {
+              "name": "データサイエンスの基礎",
+              "name_variants": [],
+              "credits": 2,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "1-2",
+                "1-3",
+                "1-4",
+                "1-5",
+                "1-6",
+                "2-1",
+                "2-2",
+                "2-3",
+                "3-1",
+                "3-2",
+                "4-1",
+                "4-2",
+                "4-3",
+                "4-4",
+                "4-5",
+                "4-6",
+                "4-7",
+                "4-8",
+                "4-9"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 2,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "1-2",
+                    "1-3",
+                    "1-4",
+                    "1-5",
+                    "1-6",
+                    "2-1",
+                    "2-2",
+                    "2-3",
+                    "3-1",
+                    "3-2",
+                    "4-1",
+                    "4-2",
+                    "4-3",
+                    "4-4",
+                    "4-5",
+                    "4-6",
+                    "4-7",
+                    "4-8",
+                    "4-9"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D23",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            }
+          ],
+          "course_count": 1,
+          "extraction": {
+            "status": "success",
+            "strategy": "direct_categories",
+            "warnings": [],
+            "source": {
+              "requirement_cells": [
+                "D15"
+              ],
+              "minimums_cell": "B19",
+              "department_cells": [],
+              "program_name": {
+                "sheet": "様式１　構成する授業科目",
+                "cell": "D5"
+              },
+              "program_required_status_cell": "D13"
+            }
+          }
+        }
+      ],
+      "extraction": {
+        "status": "success",
+        "warnings": [],
+        "source": {
+          "university_name": {
+            "sheet": "様式１　構成する授業科目",
+            "cell": "D4"
+          }
+        }
+      }
+    },
+    {
+      "university_name": "駿河台大学",
+      "source_file": "literacy_application/r7_pre/駿河台大学.xlsx",
+      "programs": [
+        {
+          "sheet_name": "様式１　構成する授業科目",
+          "source_sheets": [
+            "様式１　構成する授業科目"
+          ],
+          "program_name": "数理・データサイエンス・AI教育プログラム(リテラシー)",
+          "target_departments": [],
+          "completion_requirement": {
+            "text": "令和6年度(2024年度)以降入学者は「データリテラシー演習」を履修し、2単位を修得すること。",
+            "minimum_courses": 1,
+            "minimum_credits": 2,
+            "scope": {
+              "raw": "学部・学科によって、修了要件は相違しない",
+              "same_across_departments": true,
+              "source_cell": "D9"
+            },
+            "program_required_status": "令和6年度以前又は令和7年度より、履修することが必須のプログラムとして実施"
+          },
+          "courses": [
+            {
+              "name": "データリテラシー演習",
+              "name_variants": [],
+              "credits": 2,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "1-2",
+                "1-3",
+                "1-4",
+                "1-5",
+                "1-6",
+                "2-1",
+                "2-2",
+                "2-3",
+                "3-1",
+                "3-2"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 2,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "1-2",
+                    "1-3",
+                    "1-4",
+                    "1-5",
+                    "1-6",
+                    "2-1",
+                    "2-2",
+                    "2-3",
+                    "3-1",
+                    "3-2"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D23",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            }
+          ],
+          "course_count": 1,
+          "extraction": {
+            "status": "success",
+            "strategy": "direct_categories",
+            "warnings": [],
+            "source": {
+              "requirement_cells": [
+                "D15"
+              ],
+              "minimums_cell": "B19",
+              "department_cells": [],
+              "program_name": {
+                "sheet": "様式１　構成する授業科目",
+                "cell": "D5"
+              },
+              "program_required_status_cell": "D13"
+            }
+          }
+        }
+      ],
+      "extraction": {
+        "status": "success",
+        "warnings": [],
+        "source": {
+          "university_name": {
+            "sheet": "様式１　構成する授業科目",
+            "cell": "D4"
+          }
+        }
+      }
+    },
+    {
+      "university_name": "高崎健康福祉大学",
+      "source_file": "literacy_application/r7_pre/高崎健康福祉大学.xlsx",
+      "programs": [
+        {
+          "sheet_name": "様式１　構成する授業科目",
+          "source_sheets": [
+            "様式１　構成する授業科目"
+          ],
+          "program_name": "高崎健康福祉大学データサイエンス・AIリテラシープログラム",
+          "target_departments": [],
+          "completion_requirement": {
+            "text": "「情報リテラシーI~VI」科目の6単位を取得すること。 なお、生物生産学科は卒業要件の必修科目として設定されているため、卒業要件を満たすためにはプログラムを修了する必要がある。",
+            "minimum_courses": 6,
+            "minimum_credits": 6,
+            "scope": {
+              "raw": "学部・学科によって、修了要件は相違しない",
+              "same_across_departments": true,
+              "source_cell": "D9"
+            },
+            "program_required_status": "令和10年度以降に履修必須とする計画、又は未定"
+          },
+          "courses": [
+            {
+              "name": "情報リテラシーI",
+              "name_variants": [],
+              "credits": 1,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "3-1"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 1,
+                  "model_curriculum_codes": [
+                    "3-1"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D23",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            },
+            {
+              "name": "情報リテラシーII",
+              "name_variants": [],
+              "credits": 1,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 1,
+                  "model_curriculum_codes": [
+                    "1-1"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D24",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            },
+            {
+              "name": "情報リテラシーIII",
+              "name_variants": [],
+              "credits": 1,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-2",
+                "2-2"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 1,
+                  "model_curriculum_codes": [
+                    "1-2",
+                    "2-2"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D25",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            },
+            {
+              "name": "情報リテラシーIV",
+              "name_variants": [],
+              "credits": 1,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-2",
+                "2-1",
+                "2-2",
+                "2-3"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 1,
+                  "model_curriculum_codes": [
+                    "1-2",
+                    "2-1",
+                    "2-2",
+                    "2-3"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D26",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            },
+            {
+              "name": "情報リテラシーV",
+              "name_variants": [],
+              "credits": 1,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "1-2",
+                "1-3",
+                "1-6",
+                "3-1",
+                "3-2"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 1,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "1-2",
+                    "1-3",
+                    "1-6",
+                    "3-1",
+                    "3-2"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D27",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            },
+            {
+              "name": "情報リテラシーVI",
+              "name_variants": [],
+              "credits": 1,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "1-2",
+                "1-3",
+                "1-4",
+                "1-5",
+                "2-1",
+                "2-2"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 1,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "1-2",
+                    "1-3",
+                    "1-4",
+                    "1-5",
+                    "2-1",
+                    "2-2"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D28",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            }
+          ],
+          "course_count": 6,
+          "extraction": {
+            "status": "success",
+            "strategy": "direct_categories",
+            "warnings": [],
+            "source": {
+              "requirement_cells": [
+                "D15"
+              ],
+              "minimums_cell": "B19",
+              "department_cells": [],
+              "program_name": {
+                "sheet": "様式１　構成する授業科目",
+                "cell": "D5"
+              },
+              "program_required_status_cell": "D13"
+            }
+          }
+        }
+      ],
+      "extraction": {
+        "status": "success",
+        "warnings": [],
+        "source": {
+          "university_name": {
+            "sheet": "様式１　構成する授業科目",
+            "cell": "D4"
+          }
+        }
+      }
+    },
+    {
+      "university_name": "高崎商科大学短期大学部",
+      "source_file": "literacy_application/r7_pre/高崎商科大学短期大学部.xlsx",
+      "programs": [
+        {
+          "sheet_name": "様式１　構成する授業科目",
+          "source_sheets": [
+            "様式１　構成する授業科目"
+          ],
+          "program_name": "TUC2 AI ・データサイエンス教育プログラム",
+          "target_departments": [],
+          "completion_requirement": {
+            "text": "必須科目3単位を修得すること。",
+            "minimum_courses": 3,
+            "minimum_credits": 3,
+            "scope": {
+              "raw": "学部・学科によって、修了要件は相違しない",
+              "same_across_departments": true,
+              "source_cell": "D9"
+            },
+            "program_required_status": "令和6年度以前又は令和7年度より、履修することが必須のプログラムとして実施"
+          },
+          "courses": [
+            {
+              "name": "データリテラシー",
+              "name_variants": [],
+              "credits": 1,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "1-2",
+                "1-3",
+                "1-4",
+                "1-5",
+                "1-6",
+                "2-1",
+                "2-2",
+                "2-3",
+                "3-1"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 1,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "1-2",
+                    "1-3",
+                    "1-4",
+                    "1-5",
+                    "1-6",
+                    "2-1",
+                    "2-2",
+                    "2-3",
+                    "3-1"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D23",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            },
+            {
+              "name": "情報リテラシー",
+              "name_variants": [],
+              "credits": 1,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-1",
+                "1-3",
+                "1-4",
+                "1-5",
+                "1-6",
+                "2-2",
+                "2-3",
+                "3-1",
+                "3-2"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 1,
+                  "model_curriculum_codes": [
+                    "1-1",
+                    "1-3",
+                    "1-4",
+                    "1-5",
+                    "1-6",
+                    "2-2",
+                    "2-3",
+                    "3-1",
+                    "3-2"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D24",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            },
+            {
+              "name": "ビジネスソフト活用",
+              "name_variants": [],
+              "credits": 1,
+              "is_required": true,
+              "requirement_types": [
+                "required"
+              ],
+              "categories": [
+                "(1)必須科目(プログラムを修了するために必ず履修しなければならない科目) ※卒業要件上の必修科目とは必ずしもイコールではない"
+              ],
+              "model_curriculum_codes": [
+                "1-2",
+                "1-3",
+                "1-4",
+                "1-5",
+                "2-1",
+                "2-2",
+                "2-3"
+              ],
+              "covered_sections": [
+                "プログラム構成科目"
+              ],
+              "source_occurrences": [
+                {
+                  "credits": 1,
+                  "model_curriculum_codes": [
+                    "1-2",
+                    "1-3",
+                    "1-4",
+                    "1-5",
+                    "2-1",
+                    "2-2",
+                    "2-3"
+                  ],
+                  "section": "プログラム構成科目",
+                  "source_cell": "D25",
+                  "sheet_name": "様式１　構成する授業科目"
+                }
+              ]
+            }
+          ],
+          "course_count": 3,
+          "extraction": {
+            "status": "success",
+            "strategy": "direct_categories",
+            "warnings": [],
+            "source": {
+              "requirement_cells": [
+                "D15"
+              ],
+              "minimums_cell": "B19",
+              "department_cells": [],
+              "program_name": {
+                "sheet": "様式１　構成する授業科目",
+                "cell": "D5"
+              },
+              "program_required_status_cell": "D13"
+            }
+          }
+        }
+      ],
+      "extraction": {
+        "status": "success",
+        "warnings": [],
+        "source": {
+          "university_name": {
+            "sheet": "様式１　構成する授業科目",
+            "cell": "D4"
+          }
+        }
+      }
+    }
+  ]
+}
