@@ -4,11 +4,11 @@
   "errors": [],
   "years": {
     "r3": {
-      "university_count": 77,
-      "program_count": 144,
-      "course_count": 1462,
+      "university_count": 78,
+      "program_count": 145,
+      "course_count": 1464,
       "status_counts": {
-        "success": 77,
+        "success": 78,
         "partial": 0,
         "failed": 0
       },
@@ -27,12 +27,12 @@
     },
     "r5": {
       "university_count": 165,
-      "program_count": 272,
-      "course_count": 1216,
+      "program_count": 276,
+      "course_count": 1226,
       "status_counts": {
-        "success": 164,
+        "success": 165,
         "partial": 0,
-        "failed": 1
+        "failed": 0
       },
       "error_count": 0
     },
@@ -70,5 +70,5 @@
       "error_count": 0
     }
   },
-  "incomplete_university_count": 2
+  "incomplete_university_count": 1
 }

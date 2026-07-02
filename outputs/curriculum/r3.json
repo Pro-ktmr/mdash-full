@@ -3,14 +3,14 @@
   "year": "r3",
   "input_directory": "literacy_application/r3",
   "summary": {
-    "university_count": 77,
+    "university_count": 78,
     "status_counts": {
-      "success": 77,
+      "success": 78,
       "partial": 0,
       "failed": 0
     },
-    "program_count": 144,
-    "course_count": 1462
+    "program_count": 145,
+    "course_count": 1464
   },
   "universities": [
     {
@@ -7950,6 +7950,101 @@
           "target_departments": [],
           "completion_requirement": {
             "text": "「数理・データサイエンス入門」及び「情報リテラシー」の単位を修得すること。 単位の認定要件 「情報リテラシー」は情報倫理や情報セキュリティーの基礎について理解し、情報検索やワープロソフトや表計算ソフト等の基本的な活用スキルを身につけた学生に単位を認定する。 「数理・データサイエンス入門」は次の3つの到達目標が設定されている。各到達目標毎にレポート・小テストを課し、最大でカッコ内の評価ポイントを付与する。3つの到達目標の評価ポイントの合計が60ポイント以上のときに単位を認定する。 〇現代社会におけるデータサイエンスの役割を説明することができる。(40) 〇データサイエンスにおける代表的な分析手法について説明することができる。(30) 〇様々なデータに対し、基本的な可視化や分析などの処理をおこなうことができる。(30)",
+            "minimum_courses": null,
+            "minimum_credits": null,
+            "scope": {
+              "raw": "学部・学科によって、修了要件は相違しない",
+              "same_across_departments": true,
+              "source_cell": "E6"
+            },
+            "program_required_status": null
+          },
+          "courses": [
+            {
+              "name": "数理・データサイエンス入門",
+              "name_variants": [],
+              "credits": null,
+              "is_required": null,
+              "requirement_types": [],
+              "categories": [],
+              "model_curriculum_codes": [],
+              "covered_sections": [
+                "授業科目名称"
+              ],
+              "source_occurrences": [
+                {
+                  "section": "授業科目名称",
+                  "source_cell": "B20",
+                  "listed_number": 1,
+                  "sheet_name": "様式２－１　プログラムを構成する授業科目"
+                }
+              ]
+            },
+            {
+              "name": "情報リテラシー",
+              "name_variants": [],
+              "credits": null,
+              "is_required": null,
+              "requirement_types": [],
+              "categories": [],
+              "model_curriculum_codes": [],
+              "covered_sections": [
+                "授業科目名称"
+              ],
+              "source_occurrences": [
+                {
+                  "section": "授業科目名称",
+                  "source_cell": "B21",
+                  "listed_number": 2,
+                  "sheet_name": "様式２－１　プログラムを構成する授業科目"
+                }
+              ]
+            }
+          ],
+          "course_count": 2,
+          "extraction": {
+            "status": "success",
+            "strategy": "r3_indexed",
+            "warnings": [],
+            "source": {
+              "requirement_cells": [
+                "B9"
+              ],
+              "minimums_cell": null,
+              "department_cells": [],
+              "program_name": {
+                "sheet": "様式１　大学等概要",
+                "cell": "G12"
+              },
+              "program_required_status_cell": null
+            }
+          }
+        }
+      ],
+      "extraction": {
+        "status": "success",
+        "warnings": [],
+        "source": {
+          "university_name": {
+            "sheet": "様式２－１　プログラムを構成する授業科目",
+            "cell": "H2"
+          }
+        }
+      }
+    },
+    {
+      "university_name": "別府大学短期大学部",
+      "source_file": "literacy_application/r3/別府大学短期大学部.xlsx",
+      "programs": [
+        {
+          "sheet_name": "様式２－１　プログラムを構成する授業科目",
+          "source_sheets": [
+            "様式２－１　プログラムを構成する授業科目"
+          ],
+          "program_name": "数理・データサイエンス・AI教育プログラム",
+          "target_departments": [],
+          "completion_requirement": {
+            "text": "「数理・データサイエンス入門」及び「情報リテラシー」の単位を修得すること。 単位の認定要件 「情報リテラシー」は情報倫理や情報セキュリティーの基礎について理解し、情報検索やワープロソフトや表計算ソフト等の基本的な活用スキルを身につけた学生に単位を認定する。 「数理・データサイエンス入門」は次の3つの到達目標が設定されている。各到達目標毎にレポート・小テストを課し、最大でカッコ内の評価ポイントを付与する。3つの到達目標の評価ポイントの合計が60ポイント以上のときに単位を認定する。 〇現代社会におけるデータサイエンスの役割を説明することができる。(40) 〇データサイエンスにおける代表的な分析手法について説明することができる。(30) 〇様々なデータに対し、基本的な可視化や分析などの処理をおこなうことができる。(30)\"",
             "minimum_courses": null,
             "minimum_credits": null,
             "scope": {
